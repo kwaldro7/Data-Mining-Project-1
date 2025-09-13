@@ -86,6 +86,6 @@ Recognizing these factors helps keep the analysis balanced.
 
 ## 💻 Code
 The full code for this analysis and all visualizations can be found in the Jupyter Notebook:  
-**`olympic_continent_trends.ipynb`**
+**`olympicprojectV2.ipynb`**
 
 
