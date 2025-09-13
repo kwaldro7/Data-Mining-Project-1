@@ -1,56 +1,91 @@
-# 🏅 Data Mining Project 1: Olympic Medals Analysis
+# 🌍 Olympic Medal Trends by Continent
 
-## Overview
-This project explores trends in Olympic medal counts with a focus on the United States and its competitors.  
-We investigate questions such as:
-- Did global events (e.g., the collapse of the Soviet Union) influence medal trends?
-- Do team sports (where entire rosters receive medals) artificially inflate medal counts?
+## 📖 Introduction
+For my first project, I wanted to explore the history of the Olympic Games through the lens of medals.  
 
-The analysis is performed in Python using a Jupyter Notebook (`olympicproject1.ipynb`) and a dataset (`summer.csv`) of Olympic results.
+**Guiding Question:**  
+> How have different continents contributed to Olympic medal counts over time?
 
----
-
-## Dataset
-- **File:** `summer.csv`  
-- **Description:** Contains Summer Olympic Games results from 1896-2012 for multiple countries, including event, athlete, year, and medal type.  
-- **Source:** Kaggle Olympic dataset 
+This matters because the Olympics are more than just sports — they reflect historical, political, and cultural changes. Boycotts, new nations joining, and the growth of women’s participation all leave footprints in the medal counts.
 
 ---
 
-## Methods
-The notebook walks through:
-1. **Data Cleaning & Exploration**  
-   - Handling missing values, duplicates, and formatting.  
-   - Summarizing medal counts by country and year.  
+## 📊 The Data
+**Source:** Kaggle Olympic Games dataset (Summer & Winter Games)
 
-2. **Trend Analysis**  
-   - Plotting U.S. medal totals over time.  
-   - Comparing U.S. performance against other top nations.  
-   - Highlighting key historical periods (e.g., Cold War, post-Soviet era).  
+**Key features include:**
+- **Year** – The Olympic year  
+- **City** – The host city  
+- **Sport & Event** – Type of competition  
+- **Athlete** – Participant’s name  
+- **Country (NOC)** – The National Olympic Committee code for the country  
+- **Medal** – Gold, Silver, or Bronze  
 
-3. **Factors Considered**  
-   - Team vs. individual sports.  
-   - Geopolitical shifts (e.g., boycotts, dissolution of the USSR).  
+For this project, I focused on medal counts over time, mapping countries into continents to track broader regional performance.
 
 ---
 
-## Tools & Libraries
-- Python 3  
-- Jupyter Notebook  
-- Pandas  
-- Matplotlib
+## 🧹 Preprocessing the Data
+To prepare the dataset, I:
+- Combined Summer & Winter Games into one dataset  
+- Mapped countries to continents using an NOC-to-continent dictionary  
+- Deduplicated medals so team events only counted once  
+- Aggregated by year and continent to sum medal counts across time  
+
+These steps ensured consistency and fair comparisons.
 
 ---
 
-## Results & Insights
-- The U.S. began to consistently outperform other nations after World War II.  
-- The Soviet Union was the main competitor until its collapse in the early 1990s.  
-- Team events significantly inflate medal counts in certain years, influencing country totals.  
+## 📈 Data Visualization & Exploration
+I created several visualizations to better understand medal trends:
+
+### 1. Cumulative Medal Counts (Stacked Area Chart)
+- Europe dominated the early Games  
+- North America’s sharp growth coincided with the U.S. rise as a sporting power  
+- Asia surged after the 1980s, especially with China’s emergence  
+
+### 2. Normalized Trends (Proportion of Medals)
+- Europe’s share declined as other continents gained prominence  
+- Africa, while smaller in totals, consistently contributed in athletics and endurance sports  
+
+### 3. Summer vs. Winter Olympics
+- **Summer Games** → more diversity, many continents competing  
+- **Winter Games** → concentrated in Europe and North America, shaped by climate and infrastructure  
 
 ---
 
-## How to Run
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/kwaldro7/Data-Mining-Project-1.git
-   cd Data-Mining-Project-1
+## 🧠 Storytelling & Insights
+Several patterns emerged from this analysis:
+
+- Early Olympics were Europe-heavy due to location and limited participation  
+- The Cold War era reshaped medal distributions, with surges from the USSR and Eastern Europe  
+- Since the 1980s, Asia’s rise (especially China) shifted the global balance  
+- Africa’s contributions highlight excellence in athletics despite lower total counts  
+
+These shifts show how the Olympics reflect not only athletic achievements but also global power shifts and cultural change.
+
+---
+
+## ⚖️ Impact & Limitations
+While these trends are fascinating, a few limitations must be acknowledged:
+
+- **Population & Wealth** – Larger, wealthier countries field more athletes  
+- **Event Distribution** – Some sports award many medals (e.g., swimming), skewing totals  
+- **Gender & Access** – Women’s events expanded only recently, affecting comparisons  
+- **Colonial & Geopolitical Bias** – Early Games excluded many regions, especially in Africa and Asia  
+
+Recognizing these factors helps keep the analysis balanced.
+
+---
+
+## 📚 References
+- [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)  
+- [Seaborn Documentation](https://seaborn.pydata.org/)
+
+---
+
+## 💻 Code
+The full code for this analysis and all visualizations can be found in the Jupyter Notebook:  
+**`olympic_continent_trends.ipynb`**
+
+
